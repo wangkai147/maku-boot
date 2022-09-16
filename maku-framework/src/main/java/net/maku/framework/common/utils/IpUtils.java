@@ -6,8 +6,6 @@ import java.net.UnknownHostException;
 
 /**
  * IP地址 工具类
- *
- * @author 阿沐 babamu@126.com
  */
 public class IpUtils {
 

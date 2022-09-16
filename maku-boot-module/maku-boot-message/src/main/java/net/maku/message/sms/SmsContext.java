@@ -8,8 +8,6 @@ import java.util.Map;
 
 /**
  * 短信 Context
- *
- * @author 阿沐 babamu@126.com
  */
 public class SmsContext {
     private final SmsStrategy smsStrategy;

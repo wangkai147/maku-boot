@@ -25,8 +25,6 @@ import java.util.Set;
 
 /**
  * 菜单管理
- *
- * @author 阿沐 babamu@126.com
  */
 @Service
 @AllArgsConstructor

@@ -5,8 +5,6 @@ import lombok.Getter;
 
 /**
  * 登录信息
- *
- * @author 阿沐 babamu@126.com
  */
 @Getter
 @AllArgsConstructor

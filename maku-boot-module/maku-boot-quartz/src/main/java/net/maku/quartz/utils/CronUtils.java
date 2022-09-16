@@ -8,8 +8,6 @@ import java.util.Date;
 /**
  * cron 工具类
  *
- * @author 阿沐 babamu@126.com
- *
  */
 public class CronUtils {
     /**

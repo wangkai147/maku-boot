@@ -9,8 +9,6 @@ import java.util.Collection;
 
 /**
  * 手机短信登录 AuthenticationToken
- *
- * @author 阿沐 babamu@126.com
  */
 public class MobileAuthenticationToken extends AbstractAuthenticationToken {
     private static final long serialVersionUID = SpringSecurityCoreVersion.SERIAL_VERSION_UID;

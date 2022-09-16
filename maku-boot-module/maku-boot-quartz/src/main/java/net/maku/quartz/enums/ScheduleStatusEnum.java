@@ -5,8 +5,6 @@ import lombok.Getter;
 
 /**
  * 定时任务状态枚举
- *
- * @author 阿沐 babamu@126.com
  */
 @Getter
 @AllArgsConstructor

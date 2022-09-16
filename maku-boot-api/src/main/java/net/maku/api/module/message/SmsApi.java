@@ -4,8 +4,6 @@ import java.util.Map;
 
 /**
  * 短信服务API
- *
- * @author 阿沐 babamu@126.com
  */
 public interface SmsApi {
 

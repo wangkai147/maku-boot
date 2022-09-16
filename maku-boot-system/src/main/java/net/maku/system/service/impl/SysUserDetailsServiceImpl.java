@@ -20,8 +20,6 @@ import java.util.Set;
 
 /**
  * 用户 UserDetails 信息
- *
- * @author 阿沐 babamu@126.com
  */
 @Service
 @AllArgsConstructor

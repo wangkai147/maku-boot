@@ -6,8 +6,6 @@ import lombok.EqualsAndHashCode;
 
 /**
  * 分配角色查询
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

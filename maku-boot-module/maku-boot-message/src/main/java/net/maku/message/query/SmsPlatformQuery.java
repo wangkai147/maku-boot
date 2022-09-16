@@ -7,8 +7,6 @@ import net.maku.framework.common.query.Query;
 
 /**
 * 短信平台查询
-*
-* @author 阿沐 babamu@126.com
 */
 @Data
 @EqualsAndHashCode(callSuper = false)

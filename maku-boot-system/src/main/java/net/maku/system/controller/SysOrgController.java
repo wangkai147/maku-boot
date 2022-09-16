@@ -17,8 +17,6 @@ import java.util.List;
 
 /**
  * 机构管理
- * 
- * @author 阿沐 babamu@126.com
  */
 @RestController
 @RequestMapping("sys/org")

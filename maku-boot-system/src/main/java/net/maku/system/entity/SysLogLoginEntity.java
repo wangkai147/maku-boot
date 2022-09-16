@@ -10,8 +10,6 @@ import java.util.Date;
 
 /**
  * 登录日志
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 @TableName("sys_log_login")

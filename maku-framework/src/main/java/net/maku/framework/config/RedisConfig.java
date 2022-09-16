@@ -13,8 +13,6 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 
 /**
  * Redis配置
- *
- * @author 阿沐 babamu@126.com
  */
 @Configuration
 public class RedisConfig {

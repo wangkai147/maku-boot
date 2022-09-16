@@ -12,8 +12,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * 认证事件处理
- *
- * @author 阿沐 babamu@126.com
  */
 @Component
 @AllArgsConstructor

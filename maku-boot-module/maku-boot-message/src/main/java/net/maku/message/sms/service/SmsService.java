@@ -21,8 +21,6 @@ import java.util.Map;
 
 /**
  * 短信服务
- *
- * @author 阿沐 babamu@126.com
  */
 @Slf4j
 @Service

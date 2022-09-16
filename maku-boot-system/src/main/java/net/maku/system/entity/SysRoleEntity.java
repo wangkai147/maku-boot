@@ -10,8 +10,6 @@ import net.maku.system.enums.DataScopeEnum;
 
 /**
  * 角色
- * 
- * @author 阿沐 babamu@126.com
  */
 @Data
 @EqualsAndHashCode(callSuper=false)

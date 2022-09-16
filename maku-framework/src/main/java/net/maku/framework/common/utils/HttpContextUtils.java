@@ -13,8 +13,6 @@ import java.util.Map;
 
 /**
  * Http
- *
- * @author 阿沐 babamu@126.com
  */
 public class HttpContextUtils {
 

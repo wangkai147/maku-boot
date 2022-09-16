@@ -7,8 +7,6 @@ import java.io.Serializable;
 
 /**
  * 账号登录
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 @Schema(description = "账号登录")

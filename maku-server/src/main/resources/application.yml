@@ -15,11 +15,16 @@ server:
 spring:
   # 环境 dev|test|prod
   profiles:
-    active: dev
+    active: test
   servlet:
     multipart:
       max-file-size: 1024MB
       max-request-size: 1024MB
+
+  banner:
+    image:
+      width: 120
+      height: 60
 
 #storage:
 #  enabled: true

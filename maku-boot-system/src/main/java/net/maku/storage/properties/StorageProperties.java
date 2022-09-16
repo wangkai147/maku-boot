@@ -7,8 +7,6 @@ import org.springframework.context.annotation.Bean;
 
 /**
  * 存储配置项
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 @ConfigurationProperties(prefix = "storage")

@@ -14,8 +14,6 @@ import java.util.Date;
 
 /**
  * 菜单管理
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

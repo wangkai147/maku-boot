@@ -4,8 +4,6 @@ import lombok.Data;
 
 /**
  * 华为云存储配置项
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 public class HuaweiStorageProperties {

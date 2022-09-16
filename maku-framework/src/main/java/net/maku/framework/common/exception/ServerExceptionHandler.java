@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
  * 异常处理器
- *
- * @author 阿沐 babamu@126.com
  */
 @Slf4j
 @RestControllerAdvice

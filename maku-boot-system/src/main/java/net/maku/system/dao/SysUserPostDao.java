@@ -9,8 +9,6 @@ import java.util.List;
 
 /**
 * 用户岗位关系
-*
-* @author 阿沐 babamu@126.com
 */
 @Mapper
 public interface SysUserPostDao extends BaseDao<SysUserPostEntity> {

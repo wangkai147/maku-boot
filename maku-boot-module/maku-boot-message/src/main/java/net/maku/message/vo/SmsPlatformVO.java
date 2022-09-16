@@ -10,8 +10,6 @@ import java.util.Date;
 
 /**
  * 短信平台
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 @Schema(description = "短信平台")

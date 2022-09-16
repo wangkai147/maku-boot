@@ -7,8 +7,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
  * 加密配置
- *
- * @author 阿沐 babamu@126.com
  */
 @Configuration
 public class PasswordConfig {

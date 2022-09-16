@@ -20,8 +20,6 @@ import java.io.IOException;
 
 /**
  * 认证过滤器
- *
- * @author 阿沐 babamu@126.com
  */
 @Component
 @AllArgsConstructor

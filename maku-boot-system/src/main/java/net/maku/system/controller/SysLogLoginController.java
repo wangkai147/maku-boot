@@ -17,8 +17,6 @@ import javax.validation.Valid;
 
 /**
  * 登录日志
- *
- * @author 阿沐 babamu@126.com
  */
 @RestController
 @RequestMapping("sys/log/login")

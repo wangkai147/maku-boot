@@ -10,8 +10,6 @@ import java.io.InputStream;
 
 /**
  * 阿里云存储
- *
- * @author 阿沐 babamu@126.com
  */
 public class AliyunStorageService extends StorageService {
     

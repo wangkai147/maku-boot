@@ -21,8 +21,6 @@ import java.util.List;
 
 /**
  * 岗位管理
- *
- * @author 阿沐 babamu@126.com
  */
 @Service
 @AllArgsConstructor

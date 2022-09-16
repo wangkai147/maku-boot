@@ -7,8 +7,6 @@ import net.maku.framework.common.entity.BaseEntity;
 
 /**
  * 数据字典
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

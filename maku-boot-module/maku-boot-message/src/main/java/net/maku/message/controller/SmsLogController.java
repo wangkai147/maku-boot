@@ -17,8 +17,6 @@ import javax.validation.Valid;
 
 /**
 * 短信日志
-*
-* @author 阿沐 babamu@126.com
 */
 @RestController
 @RequestMapping("message/sms/log")

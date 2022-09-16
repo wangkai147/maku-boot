@@ -17,8 +17,6 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * 认证管理
- *
- * @author 阿沐 babamu@126.com
  */
 @RestController
 @RequestMapping("sys/auth")

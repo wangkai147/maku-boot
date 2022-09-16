@@ -9,8 +9,6 @@ import java.io.Serializable;
 
 /**
  * 用户修改密码
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 @Schema(description = "用户修改密码")

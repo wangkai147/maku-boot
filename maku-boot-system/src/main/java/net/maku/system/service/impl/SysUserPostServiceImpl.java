@@ -14,8 +14,6 @@ import java.util.stream.Collectors;
 
 /**
  * 用户岗位关系
- *
- * @author 阿沐 babamu@126.com
  */
 @Service
 public class SysUserPostServiceImpl extends BaseServiceImpl<SysUserPostDao, SysUserPostEntity> implements SysUserPostService {

@@ -9,8 +9,6 @@ import java.io.InputStream;
 
 /**
  * 华为云存储
- *
- * @author 阿沐 babamu@126.com
  */
 public class HuaweiStorageService extends StorageService {
 

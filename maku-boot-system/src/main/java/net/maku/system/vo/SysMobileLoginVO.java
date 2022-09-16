@@ -7,8 +7,6 @@ import java.io.Serializable;
 
 /**
  * 手机号登录
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 @Schema(description = "手机号登录")

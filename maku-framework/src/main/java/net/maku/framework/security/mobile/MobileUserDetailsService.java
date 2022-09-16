@@ -5,8 +5,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 /**
  * 手机短信登录，UserDetailsService
- *
- * @author 阿沐 babamu@126.com
  */
 public interface MobileUserDetailsService {
 

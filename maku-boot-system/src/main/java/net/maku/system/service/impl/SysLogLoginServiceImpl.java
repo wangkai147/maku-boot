@@ -23,8 +23,6 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * 登录日志
- *
- * @author 阿沐 babamu@126.com
  */
 @Service
 @AllArgsConstructor

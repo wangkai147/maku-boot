@@ -8,8 +8,6 @@ import net.maku.message.vo.SmsLogVO;
 
 /**
  * 短信日志
- *
- * @author 阿沐 babamu@126.com
  */
 public interface SmsLogService extends BaseService<SmsLogEntity> {
 

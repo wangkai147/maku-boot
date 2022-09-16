@@ -4,8 +4,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 
 /**
  * 用户
- *
- * @author 阿沐 babamu@126.com
  */
 public class SecurityUser {
 

@@ -11,8 +11,6 @@ import java.util.Map;
 
 /**
  * 短信服务Api
- *
- * @author 阿沐 babamu@126.com
  */
 @Component
 @AllArgsConstructor

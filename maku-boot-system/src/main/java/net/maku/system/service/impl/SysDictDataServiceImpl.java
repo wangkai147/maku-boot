@@ -19,8 +19,6 @@ import java.util.List;
 
 /**
  * 数据字典
- *
- * @author 阿沐 babamu@126.com
  */
 @Service
 @AllArgsConstructor

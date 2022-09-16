@@ -2,8 +2,6 @@ package net.maku.framework.common.constant;
 
 /**
  * 常量
- *
- * @author 阿沐 babamu@126.com
  */
 public interface Constant {
     /**

@@ -9,8 +9,6 @@ import java.io.Serializable;
 
 /**
  * 定时任务
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 @EqualsAndHashCode(callSuper=false)

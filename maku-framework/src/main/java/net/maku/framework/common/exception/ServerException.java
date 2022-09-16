@@ -5,8 +5,6 @@ import lombok.EqualsAndHashCode;
 
 /**
  * 自定义异常
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

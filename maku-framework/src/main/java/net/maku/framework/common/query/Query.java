@@ -9,8 +9,6 @@ import javax.validation.constraints.NotNull;
 
 /**
  * 查询公共参数
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 public class Query {

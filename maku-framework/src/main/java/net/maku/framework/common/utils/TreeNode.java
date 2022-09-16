@@ -10,8 +10,6 @@ import java.util.List;
 
 /**
  * 树节点，所有需要实现树节点的，都需要继承该类
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 public class TreeNode<T> implements Serializable {

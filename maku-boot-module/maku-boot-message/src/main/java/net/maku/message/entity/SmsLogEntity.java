@@ -11,8 +11,6 @@ import java.util.Date;
 
 /**
  * 短信日志
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 @EqualsAndHashCode(callSuper=false)

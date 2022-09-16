@@ -26,8 +26,6 @@ import java.util.List;
 
 /**
  * 字典类型
- *
- * @author 阿沐 babamu@126.com
  */
 @Service
 @AllArgsConstructor

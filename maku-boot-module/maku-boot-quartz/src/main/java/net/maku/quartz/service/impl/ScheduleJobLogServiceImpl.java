@@ -17,8 +17,6 @@ import org.springframework.stereotype.Service;
 
 /**
  * 定时任务日志
- *
- * @author 阿沐 babamu@126.com
  */
 @Service
 @AllArgsConstructor

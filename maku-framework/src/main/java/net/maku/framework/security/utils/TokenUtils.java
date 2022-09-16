@@ -7,8 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * Token 工具类
- *
- * @author 阿沐 babamu@126.com
  */
 public class TokenUtils {
 

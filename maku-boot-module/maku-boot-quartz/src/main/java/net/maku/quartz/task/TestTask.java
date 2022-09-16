@@ -5,8 +5,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * 测试定时任务
- *
- * @author 阿沐 babamu@126.com
  */
 @Slf4j
 @Component

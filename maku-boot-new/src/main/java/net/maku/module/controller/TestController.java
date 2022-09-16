@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 新模块测试
- *
- * @author 阿沐 babamu@126.com
  */
 @RestController
 @RequestMapping("new/test")

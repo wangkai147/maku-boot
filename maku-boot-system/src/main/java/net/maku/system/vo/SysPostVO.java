@@ -13,8 +13,6 @@ import java.util.Date;
 
 /**
 * 岗位管理
-*
-* @author 阿沐 babamu@126.com
 */
 @Data
 @Schema(description = "岗位管理")

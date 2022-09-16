@@ -10,8 +10,6 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * Swagger配置
- *
- * @author 阿沐  babamu@126.com
  */
 @Configuration
 public class SwaggerConfig{
@@ -28,16 +26,17 @@ public class SwaggerConfig{
     @Bean
     public OpenAPI customOpenAPI() {
         Contact contact= new Contact();
-        contact.setName("阿沐 babamu@126.com");
+        contact.setName("JWangZzz");
+        contact.setEmail("2925285800@qq.com");
 
         return new OpenAPI().info(new Info()
             .title("MakuBoot")
             .description( "MakuBoot")
             .contact(contact)
             .version("1.0")
-            .termsOfService("https://maku.net")
+            .termsOfService("https://github.com/wangkai147/maku-boot")
             .license(new License().name("MIT")
-            .url("https://maku.net")));
+            .url("https://github.com/wangkai147/maku-boot")));
     }
 
 }

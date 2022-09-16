@@ -11,8 +11,6 @@ import java.util.List;
 
 /**
  * 角色
- * 
- * @author 阿沐 babamu@126.com
  */
 public interface SysRoleService extends BaseService<SysRoleEntity> {
 

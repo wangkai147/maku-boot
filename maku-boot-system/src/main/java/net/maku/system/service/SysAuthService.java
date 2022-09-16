@@ -6,8 +6,6 @@ import net.maku.system.vo.SysTokenVO;
 
 /**
  * 权限认证服务
- *
- * @author 阿沐 babamu@126.com
  */
 public interface SysAuthService {
 

@@ -10,8 +10,6 @@ import java.util.Date;
 
 /**
  * 定时任务日志
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 @TableName("schedule_job_log")

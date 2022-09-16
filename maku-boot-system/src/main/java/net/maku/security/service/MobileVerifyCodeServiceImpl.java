@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 
 /**
  * 短信验证码效验
- *
- * @author 阿沐 babamu@126.com
  */
 @Service
 @AllArgsConstructor

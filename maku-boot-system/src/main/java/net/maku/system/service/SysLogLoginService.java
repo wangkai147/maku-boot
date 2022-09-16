@@ -8,8 +8,6 @@ import net.maku.system.vo.SysLogLoginVO;
 
 /**
  * 登录日志
- *
- * @author 阿沐 babamu@126.com
  */
 public interface SysLogLoginService extends BaseService<SysLogLoginEntity> {
 

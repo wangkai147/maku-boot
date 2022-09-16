@@ -8,8 +8,6 @@ import java.util.Map;
 
 /**
  * 树形结构工具类，如：菜单、机构等
- *
- * @author 阿沐 babamu@126.com
  */
 public class TreeUtils {
 

@@ -12,8 +12,6 @@ import javax.annotation.Resource;
 
 /**
  * 本地资源映射配置
- *
- * @author 阿沐 babamu@126.com
  */
 @Configuration
 @ConditionalOnProperty(prefix = "storage", value = "enabled")

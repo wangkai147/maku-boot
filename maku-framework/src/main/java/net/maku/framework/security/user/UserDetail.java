@@ -13,8 +13,6 @@ import java.util.stream.Collectors;
 
 /**
  * 登录用户信息
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 public class UserDetail implements UserDetails {

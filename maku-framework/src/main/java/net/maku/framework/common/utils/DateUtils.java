@@ -7,8 +7,6 @@ import java.util.Date;
 
 /**
  * 日期处理
- * 
- * @author 阿沐 babamu@126.com
  */
 public class DateUtils {
 	/** 时间格式(yyyy-MM-dd) */

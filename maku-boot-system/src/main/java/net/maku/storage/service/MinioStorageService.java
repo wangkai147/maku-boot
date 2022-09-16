@@ -12,8 +12,6 @@ import java.io.InputStream;
 
 /**
  * Minio存储
- *
- * @author 阿沐 babamu@126.com
  */
 public class MinioStorageService extends StorageService {
     private final MinioClient minioClient;

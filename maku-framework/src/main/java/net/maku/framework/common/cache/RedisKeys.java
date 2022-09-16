@@ -2,8 +2,6 @@ package net.maku.framework.common.cache;
 
 /**
  * Redis Key管理
- *
- * @author 阿沐 babamu@126.com
  */
 public class RedisKeys {
 

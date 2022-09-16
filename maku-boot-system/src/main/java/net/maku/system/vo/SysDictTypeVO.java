@@ -12,8 +12,6 @@ import java.util.Date;
 
 /**
  * 字典类型
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 @Schema(description = "字典类型")

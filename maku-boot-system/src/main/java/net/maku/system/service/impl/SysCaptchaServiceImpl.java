@@ -13,8 +13,6 @@ import org.springframework.stereotype.Service;
 
 /**
  * 验证码
- *
- * @author 阿沐 babamu@126.com
  */
 @Service
 @AllArgsConstructor

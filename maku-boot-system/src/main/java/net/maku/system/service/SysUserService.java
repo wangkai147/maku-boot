@@ -11,8 +11,6 @@ import java.util.List;
 
 /**
  * 用户管理
- *
- * @author 阿沐 babamu@126.com
  */
 public interface SysUserService extends BaseService<SysUserEntity> {
 

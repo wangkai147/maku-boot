@@ -26,8 +26,6 @@ import java.util.Map;
 
 /**
  * 短信平台
- *
- * @author 阿沐 babamu@126.com
  */
 @RestController
 @RequestMapping("message/sms/platform")

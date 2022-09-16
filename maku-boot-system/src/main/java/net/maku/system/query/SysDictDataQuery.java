@@ -9,8 +9,6 @@ import javax.validation.constraints.NotNull;
 
 /**
  * 字典数据
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

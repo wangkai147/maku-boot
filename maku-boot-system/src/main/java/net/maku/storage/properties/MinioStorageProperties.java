@@ -4,8 +4,6 @@ import lombok.Data;
 
 /**
  * Minio存储配置项
- *
- * @author 阿沐 babamu@126.com
  */
 @Data
 public class MinioStorageProperties {

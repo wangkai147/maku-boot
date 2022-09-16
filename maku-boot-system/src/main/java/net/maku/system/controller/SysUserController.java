@@ -26,8 +26,6 @@ import java.util.List;
 
 /**
  * 用户管理
- *
- * @author 阿沐 babamu@126.com
  */
 @RestController
 @RequestMapping("sys/user")
