@@ -36,11 +36,11 @@ public abstract class AbstractScheduleJob extends QuartzJobBean {
             //执行任务
             doExecute(scheduleJob);
             //保存成功任务日志
-//            saveLog(scheduleJob, null);
+            saveLog(scheduleJob, null);
         } catch (Exception e) {
             log.error("任务执行失败，任务ID：{}", scheduleJob.getId(), e);
             //保存失败任务日志
-//            saveLog(scheduleJob, e);
+            saveLog(scheduleJob, e);
         }
     }
 
