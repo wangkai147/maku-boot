@@ -4,6 +4,7 @@ import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
 import net.maku.framework.common.exception.ServerException;
 import net.maku.storage.properties.StorageProperties;
+import net.maku.storage.service.inter.StorageService;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -11,9 +12,9 @@ import java.io.InputStream;
 /**
  * 阿里云存储
  */
-public class AliyunStorageService extends StorageService {
+public class ALiYunStorageService extends StorageService {
     
-    public AliyunStorageService(StorageProperties properties) {
+    public ALiYunStorageService(StorageProperties properties) {
         this.properties = properties;
     }
 

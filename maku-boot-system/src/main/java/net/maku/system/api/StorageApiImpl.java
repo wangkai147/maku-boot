@@ -2,7 +2,7 @@ package net.maku.system.api;
 
 import lombok.AllArgsConstructor;
 import net.maku.api.module.system.StorageApi;
-import net.maku.storage.service.StorageService;
+import net.maku.storage.service.inter.StorageService;
 import org.springframework.stereotype.Component;
 
 import java.io.InputStream;

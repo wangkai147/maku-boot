@@ -6,7 +6,7 @@ import lombok.Data;
  * 阿里云存储配置项
  */
 @Data
-public class AliyunStorageProperties {
+public class ALiYunStorageProperties {
     private String endPoint;
     private String accessKeyId;
     private String accessKeySecret;

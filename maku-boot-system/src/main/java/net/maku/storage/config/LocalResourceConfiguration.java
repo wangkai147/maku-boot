@@ -3,6 +3,7 @@ package net.maku.storage.config;
 import net.maku.storage.enums.StorageTypeEnum;
 import net.maku.storage.properties.LocalStorageProperties;
 import net.maku.storage.properties.StorageProperties;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -20,7 +21,7 @@ public class LocalResourceConfiguration implements WebMvcConfigurer {
     private StorageProperties properties;
 
     @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    public void addResourceHandlers(@NotNull ResourceHandlerRegistry registry) {
         // 如果不是本地存储，则返回
         if(properties.getConfig().getType() != StorageTypeEnum.LOCAL){
             return;

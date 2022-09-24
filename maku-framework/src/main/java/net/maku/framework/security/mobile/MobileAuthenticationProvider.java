@@ -1,5 +1,6 @@
 package net.maku.framework.security.mobile;
 
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.MessageSource;
 import org.springframework.context.MessageSourceAware;
@@ -78,7 +79,7 @@ public class MobileAuthenticationProvider implements AuthenticationProvider, Ini
     }
 
     @Override
-    public void setMessageSource(MessageSource messageSource) {
+    public void setMessageSource(@NotNull MessageSource messageSource) {
         this.messages = new MessageSourceAccessor(messageSource);
     }
 

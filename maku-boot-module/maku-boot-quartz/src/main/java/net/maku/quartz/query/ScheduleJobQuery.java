@@ -6,8 +6,8 @@ import lombok.EqualsAndHashCode;
 import net.maku.framework.common.query.Query;
 
 /**
-* 定时任务查询
-*/
+ * 定时任务查询
+ */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Schema(description = "定时任务查询")

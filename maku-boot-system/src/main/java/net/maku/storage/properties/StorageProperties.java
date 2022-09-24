@@ -26,7 +26,7 @@ public class StorageProperties {
     /**
      * 阿里云配置项
      */
-    private AliyunStorageProperties aliyun;
+    private ALiYunStorageProperties aliyun;
     /**
      * 七牛云配置项
      */
@@ -68,8 +68,8 @@ public class StorageProperties {
 
     @Bean
     @ConfigurationProperties(prefix = "storage.aliyun")
-    public AliyunStorageProperties aliyunStorageProperties() {
-        return new AliyunStorageProperties();
+    public ALiYunStorageProperties aliyunStorageProperties() {
+        return new ALiYunStorageProperties();
     }
 
     @Bean

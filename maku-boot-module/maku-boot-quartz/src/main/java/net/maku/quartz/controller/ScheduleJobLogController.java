@@ -19,11 +19,11 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 /**
-* 定时任务日志
-*/
+ * 定时任务日志
+ */
 @RestController
 @RequestMapping("schedule/log")
-@Tag(name="定时任务日志")
+@Tag(name = "定时任务日志")
 @AllArgsConstructor
 public class ScheduleJobLogController {
     private final ScheduleJobLogService scheduleJobLogService;
@@ -31,7 +31,7 @@ public class ScheduleJobLogController {
     @GetMapping("page")
     @Operation(summary = "分页")
     @PreAuthorize("hasAuthority('schedule:log')")
-    public Result<PageResult<ScheduleJobLogVO>> page(@Valid ScheduleJobLogQuery query){
+    public Result<PageResult<ScheduleJobLogVO>> page(@Valid ScheduleJobLogQuery query) {
         PageResult<ScheduleJobLogVO> page = scheduleJobLogService.page(query);
 
         return Result.ok(page);
@@ -40,7 +40,7 @@ public class ScheduleJobLogController {
     @GetMapping("{id}")
     @Operation(summary = "信息")
     @PreAuthorize("hasAuthority('schedule:log')")
-    public Result<ScheduleJobLogVO> get(@PathVariable("id") Long id){
+    public Result<ScheduleJobLogVO> get(@PathVariable("id") Long id) {
         ScheduleJobLogEntity entity = scheduleJobLogService.getById(id);
 
         return Result.ok(ScheduleJobLogConvert.INSTANCE.convert(entity));

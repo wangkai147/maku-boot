@@ -6,6 +6,7 @@ import io.minio.MinioClient;
 import io.minio.PutObjectArgs;
 import net.maku.framework.common.exception.ServerException;
 import net.maku.storage.properties.StorageProperties;
+import net.maku.storage.service.inter.StorageService;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;

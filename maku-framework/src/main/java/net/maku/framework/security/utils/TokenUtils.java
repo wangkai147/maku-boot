@@ -7,6 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * Token 工具类
+ * <p>
+ * 1. 生成token
+ * 2. 获取token
+ *
+ * @author wangkai
  */
 public class TokenUtils {
 
