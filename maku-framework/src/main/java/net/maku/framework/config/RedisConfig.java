@@ -15,6 +15,8 @@ import javax.annotation.Resource;
 
 /**
  * Redis配置
+ *
+ * @author wangkai
  */
 @Configuration
 public class RedisConfig {

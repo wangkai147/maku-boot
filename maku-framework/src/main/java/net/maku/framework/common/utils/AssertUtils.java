@@ -6,6 +6,8 @@ import net.maku.framework.common.exception.ServerException;
 
 /**
  * 校验工具类
+ *
+ * @author wangkai
  */
 public class AssertUtils {
 
@@ -22,7 +24,7 @@ public class AssertUtils {
     }
 
     public static void isArrayEmpty(Object[] array, String variable) {
-        if(ArrayUtil.isEmpty(array)){
+        if (ArrayUtil.isEmpty(array)) {
             throw new ServerException(variable + "不能为空");
         }
     }

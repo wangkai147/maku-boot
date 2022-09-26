@@ -18,6 +18,8 @@ import org.springframework.util.Assert;
 
 /**
  * 手机短信登录 AuthenticationProvider
+ *
+ * @author wangkai
  */
 public class MobileAuthenticationProvider implements AuthenticationProvider, InitializingBean, MessageSourceAware {
     protected MessageSourceAccessor messages = SpringSecurityMessageSource.getAccessor();

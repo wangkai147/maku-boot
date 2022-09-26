@@ -10,15 +10,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 获取真实地址
+ * 获取真实IP地址
+ *
+ * @author wangkai
  */
 @Slf4j
 public class AddressUtils {
-    // 实时查询
+    /**
+     * 实时查询
+     */
     public static final String ADDRESS_URL = "https://whois.pconline.com.cn/ipJson.jsp";
     public static final String UNKNOWN = "未知";
 
-    public static String getAddressByIP(String ip) {
+    public static String getAddressByIp(String ip) {
         // 内网
         if (IpUtils.internalIp(ip)) {
             return "内网IP";

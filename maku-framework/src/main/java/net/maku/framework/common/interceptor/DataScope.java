@@ -5,6 +5,8 @@ import lombok.Data;
 
 /**
  * 数据范围
+ *
+ * @author wangkai
  */
 @Data
 @AllArgsConstructor

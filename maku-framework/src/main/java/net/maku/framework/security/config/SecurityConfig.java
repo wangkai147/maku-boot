@@ -30,6 +30,8 @@ import java.util.List;
 
 /**
  * SpringSecurity 配置文件
+ *
+ * @author wangkai
  */
 @Configuration
 @AllArgsConstructor

@@ -11,6 +11,8 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * mybatis-plus 配置
+ *
+ * @author wangkai
  */
 @Configuration
 public class MybatisPlusConfig {
@@ -31,7 +33,7 @@ public class MybatisPlusConfig {
     }
 
     @Bean
-    public FieldMetaObjectHandler fieldMetaObjectHandler(){
+    public FieldMetaObjectHandler fieldMetaObjectHandler() {
         return new FieldMetaObjectHandler();
     }
 }

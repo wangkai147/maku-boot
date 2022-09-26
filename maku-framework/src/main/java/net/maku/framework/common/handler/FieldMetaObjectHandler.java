@@ -9,6 +9,8 @@ import java.util.Date;
 
 /**
  * mybatis-plus 自动填充字段
+ *
+ * @author wangkai
  */
 public class FieldMetaObjectHandler implements MetaObjectHandler {
     private final static String CREATE_TIME = "createTime";

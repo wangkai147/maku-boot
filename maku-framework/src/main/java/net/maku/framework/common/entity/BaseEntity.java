@@ -7,6 +7,8 @@ import java.util.Date;
 
 /**
  * Entity基类
+ *
+ * @author wangkai
  */
 @Data
 public abstract class BaseEntity {
@@ -20,7 +22,7 @@ public abstract class BaseEntity {
      * 创建者
      */
     @TableField(fill = FieldFill.INSERT)
-    private Long  creator;
+    private Long creator;
 
     /**
      * 创建时间
@@ -32,7 +34,7 @@ public abstract class BaseEntity {
      * 更新者
      */
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    private Long  updater;
+    private Long updater;
 
     /**
      * 更新时间

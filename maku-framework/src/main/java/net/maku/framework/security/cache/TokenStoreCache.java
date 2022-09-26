@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * 认证 Cache
+ *
+ * @author wangkai
  */
 @Component
 @AllArgsConstructor

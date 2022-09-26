@@ -13,6 +13,8 @@ import java.util.stream.Collectors;
 
 /**
  * 登录用户信息
+ *
+ * @author wangkai
  */
 @Data
 public class UserDetail implements UserDetails {
@@ -37,11 +39,11 @@ public class UserDetail implements UserDetails {
      */
     private List<Long> dataScopeList;
     /**
-     * 帐户是否过期
+     * 账号是否过期
      */
     private boolean isAccountNonExpired = true;
     /**
-     * 帐户是否被锁定
+     * 账户是否被锁定
      */
     private boolean isAccountNonLocked = true;
     /**
@@ -49,7 +51,7 @@ public class UserDetail implements UserDetails {
      */
     private boolean isCredentialsNonExpired = true;
     /**
-     * 帐户是否可用
+     * 账户是否可用
      */
     private boolean isEnabled = true;
     /**

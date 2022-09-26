@@ -10,33 +10,37 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * Swagger配置
+ *
+ * @author wangkai
  */
 @Configuration
-public class SwaggerConfig{
+public class SwaggerConfig {
 
     @Bean
-    public GroupedOpenApi userApi(){
-        String[] paths = { "/**" };
-        String[] packagedToMatch = { "net.maku" };
-        return GroupedOpenApi.builder().group("MakuBoot")
-                .pathsToMatch(paths)
-                .packagesToScan(packagedToMatch).build();
+    public GroupedOpenApi userApi() {
+        String[] paths = {"/**"};
+        String[] packagedToMatch = {"net.maku"};
+        return GroupedOpenApi.builder().group("MakuBoot").pathsToMatch(paths).packagesToScan(packagedToMatch).build();
     }
 
     @Bean
-    public OpenAPI customOpenAPI() {
-        Contact contact= new Contact();
+    public OpenAPI customOpenApi() {
+        Contact contact = new Contact();
         contact.setName("JWangZzz");
         contact.setEmail("2925285800@qq.com");
 
-        return new OpenAPI().info(new Info()
-            .title("MakuBoot")
-            .description( "MakuBoot")
-            .contact(contact)
-            .version("1.0")
-            .termsOfService("https://github.com/wangkai147/maku-boot")
-            .license(new License().name("MIT")
-            .url("https://github.com/wangkai147/maku-boot")));
+        License listener = new License();
+        listener.name("MIT").url("https://github.com/wangkai147/maku-boot");
+
+        Info info = new Info();
+        info.title("MakuBoot")
+                .description("MakuBoot")
+                .contact(contact)
+                .version("1.0")
+                .termsOfService("https://github.com/wangkai147/maku-boot")
+                .license(listener);
+
+        return new OpenAPI().info(info);
     }
 
 }

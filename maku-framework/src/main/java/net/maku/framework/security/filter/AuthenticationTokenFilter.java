@@ -5,6 +5,7 @@ import net.maku.framework.security.cache.TokenStoreCache;
 import net.maku.framework.security.user.UserDetail;
 import net.maku.framework.security.utils.TokenUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
@@ -20,6 +21,8 @@ import java.io.IOException;
 
 /**
  * 认证过滤器
+ *
+ * @author wangkai
  */
 @Component
 @AllArgsConstructor
@@ -27,7 +30,7 @@ public class AuthenticationTokenFilter extends OncePerRequestFilter {
     private final TokenStoreCache tokenStoreCache;
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
+    protected void doFilterInternal(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response, @NotNull FilterChain chain) throws ServletException, IOException {
         String accessToken = TokenUtils.getAccessToken(request);
         // accessToken为空，表示未登录
         if (StringUtils.isBlank(accessToken)) {

@@ -3,7 +3,9 @@ package net.maku.framework.security.user;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 /**
- * 用户
+ * 获取用户信息
+ *
+ * @author wangkai
  */
 public class SecurityUser {
 
@@ -13,8 +15,8 @@ public class SecurityUser {
     public static UserDetail getUser() {
         UserDetail user;
         try {
-            user = (UserDetail)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        }catch (Exception e){
+            user = (UserDetail) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        } catch (Exception e) {
             return new UserDetail();
         }
 

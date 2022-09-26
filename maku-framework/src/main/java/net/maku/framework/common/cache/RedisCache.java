@@ -11,6 +11,8 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Redis Cache
+ *
+ * @author wangkai
  */
 @Component
 public class RedisCache {
@@ -24,7 +26,7 @@ public class RedisCache {
     /**
      * 过期时长为1小时，单位：秒
      */
-    public final static long HOUR_ONE_EXPIRE = 60 * 60 * 1L;
+    public final static long HOUR_ONE_EXPIRE = 60 * 60L;
     /**
      * 过期时长为6小时，单位：秒
      */
