@@ -29,7 +29,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * SpringSecurity 配置文件
+ * SpringSecurity 5.4.x以上新用法配置：为避免循环依赖，仅用于配置HttpSecurity
+ * <p>
+ * SpringSecurity基于Filter技术，通过一系列内置的或自定义的安全Filter，实现接口的认证与授权。
+ * <p>
+ * 高级使用：<p>
+ * 1. 基于方法的动态权限<p>
+ * 2. 基于路径的动态权限(其实每个接口对应的路径都是唯一的，通过路径来进行接口的权限控制才是更优雅的方式。)<p>
  *
  * @author wangkai
  */
