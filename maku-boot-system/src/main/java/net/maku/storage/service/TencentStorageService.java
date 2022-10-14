@@ -43,12 +43,12 @@ public class TencentStorageService extends StorageService {
             COSClient cosClient = new COSClient(cred, clientConfig);
 
             // 存储桶名称，格式：BucketName-APPID
-            String bucketName = properties.getTencent().getBucketName() + "-" + properties.getTencent().getAppId();
+            // String bucketName = properties.getTencent().getBucketName() + "-" + properties.getTencent().getAppId();
 
             ObjectMetadata metadata = new ObjectMetadata();
             metadata.setContentLength(inputStream.available());
 
-            PutObjectRequest request = new PutObjectRequest(bucketName, path, inputStream, metadata);
+            PutObjectRequest request = new PutObjectRequest(properties.getTencent().getBucketName(), path, inputStream, metadata);
             PutObjectResult result = cosClient.putObject(request);
 
             cosClient.shutdown();
