@@ -10,14 +10,9 @@
     <packaging>jar</packaging>
 
     <dependencies>
-	    <dependency>
-            <groupId>net.maku</groupId>
-            <artifactId>maku-boot-system</artifactId>
-            <version>${revision}</version>
-        </dependency>
         <dependency>
             <groupId>net.maku</groupId>
-            <artifactId>maku-boot-message</artifactId>
+            <artifactId>maku-boot-system</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
@@ -27,7 +22,12 @@
         </dependency>
         <dependency>
             <groupId>net.maku</groupId>
-            <artifactId>maku-boot-quartz</artifactId>
+            <artifactId>maku-model-message</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.maku</groupId>
+            <artifactId>maku-model-quartz</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
