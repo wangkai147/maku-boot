@@ -6,7 +6,7 @@
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>maku-model-message</artifactId>
+    <artifactId>maku-boot-message</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
