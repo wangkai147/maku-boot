@@ -36,7 +36,7 @@ public class SysAuthServiceImpl implements SysAuthService {
     private final SysLogLoginService sysLogLoginService;
     private final SysUserService sysUserService;
     private final SmsApi smsApi;
-    
+
     @Override
     public SysTokenVO loginByAccount(SysAccountLoginVO login) {
         // 验证码效验
@@ -103,7 +103,7 @@ public class SysAuthServiceImpl implements SysAuthService {
         }
 
         // 发送短信
-        smsApi.sendCode(mobile, "code", code);
+        smsApi.send(mobile, "code", code);
     }
 
     @Override
