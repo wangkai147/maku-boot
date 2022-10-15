@@ -17,7 +17,7 @@
         </dependency>
         <dependency>
             <groupId>net.maku</groupId>
-            <artifactId>maku-boot-message</artifactId>
+            <artifactId>maku-model-message</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
@@ -27,7 +27,7 @@
         </dependency>
         <dependency>
             <groupId>net.maku</groupId>
-            <artifactId>maku-boot-quartz</artifactId>
+            <artifactId>maku-model-quartz</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
