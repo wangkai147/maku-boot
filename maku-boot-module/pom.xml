@@ -9,8 +9,8 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>maku-boot-quartz</module>
-		<module>maku-boot-message</module>
+		<module>maku-model-quartz</module>
+		<module>maku-model-message</module>
     </modules>
 	
 </project>
