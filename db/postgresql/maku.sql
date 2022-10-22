@@ -1,6 +1,6 @@
 CREATE TABLE sys_user
 (
-    id          bigint IDENTITY NOT NULL,
+    id          bigserial NOT NULL,
     username    varchar(50) NOT NULL,
     password    varchar(100),
     real_name   varchar(50),
@@ -8,15 +8,15 @@ CREATE TABLE sys_user
     gender      int,
     email       varchar(100),
     mobile      varchar(20),
-    org_id      bigint,
+    org_id      int8,
     super_admin int,
     status      int,
     version     int,
     deleted     int,
-    creator     bigint,
-    create_time datetime,
-    updater     bigint,
-    update_time datetime,
+    creator     int8,
+    create_time timestamp,
+    updater     int8,
+    update_time timestamp,
     primary key (id)
 );
 
@@ -42,16 +42,16 @@ COMMENT ON COLUMN sys_user.update_time IS '更新时间';
 
 CREATE TABLE sys_org
 (
-    id          bigint IDENTITY NOT NULL,
-    pid         bigint,
+    id          bigserial NOT NULL,
+    pid         int8,
     name        varchar(50),
     sort        int,
     version     int,
     deleted     int,
-    creator     bigint,
-    create_time datetime,
-    updater     bigint,
-    update_time datetime,
+    creator     int8,
+    create_time timestamp,
+    updater     int8,
+    update_time timestamp,
     primary key (id)
 );
 
@@ -70,17 +70,17 @@ COMMENT ON COLUMN sys_org.update_time IS '更新时间';
 
 create table sys_role
 (
-    id          bigint IDENTITY NOT NULL,
+    id          bigserial NOT NULL,
     name        varchar(50),
     remark      varchar(100),
     data_scope  int,
-    org_id      bigint,
+    org_id      int8,
     version     int,
     deleted     int,
-    creator     bigint,
-    create_time datetime,
-    updater     bigint,
-    update_time datetime,
+    creator     int8,
+    create_time timestamp,
+    updater     int8,
+    update_time timestamp,
     primary key (id)
 );
 
@@ -100,15 +100,15 @@ COMMENT ON COLUMN sys_role.update_time IS '更新时间';
 
 create table sys_user_role
 (
-    id          bigint IDENTITY NOT NULL,
-    role_id     bigint,
-    user_id     bigint,
+    id          bigserial NOT NULL,
+    role_id     int8,
+    user_id     int8,
     version     int,
     deleted     int,
-    creator     bigint,
-    create_time datetime,
-    updater     bigint,
-    update_time datetime,
+    creator     int8,
+    create_time timestamp,
+    updater     int8,
+    update_time timestamp,
     primary key (id)
 );
 
@@ -125,17 +125,17 @@ COMMENT ON COLUMN sys_user_role.update_time IS '更新时间';
 
 CREATE TABLE sys_post
 (
-    id          bigint IDENTITY NOT NULL,
+    id          bigserial NOT NULL,
     post_code   varchar(100),
     post_name   varchar(100),
     sort        int,
     status      int,
     version     int,
     deleted     int,
-    creator     bigint,
-    create_time datetime,
-    updater     bigint,
-    update_time datetime,
+    creator     int8,
+    create_time timestamp,
+    updater     int8,
+    update_time timestamp,
     primary key (id)
 );
 
@@ -155,15 +155,15 @@ COMMENT ON COLUMN sys_post.update_time IS '更新时间';
 
 CREATE TABLE sys_user_post
 (
-    id          bigint IDENTITY NOT NULL,
-    user_id     bigint,
-    post_id     bigint,
+    id          bigserial NOT NULL,
+    user_id     int8,
+    post_id     int8,
     version     int,
     deleted     int,
-    creator     bigint,
-    create_time datetime,
-    updater     bigint,
-    update_time datetime,
+    creator     int8,
+    create_time timestamp,
+    updater     int8,
+    update_time timestamp,
     primary key (id)
 );
 
@@ -181,8 +181,8 @@ COMMENT ON COLUMN sys_user_post.update_time IS '更新时间';
 
 create table sys_menu
 (
-    id          bigint IDENTITY NOT NULL,
-    pid         bigint NOT NULL,
+    id          bigserial NOT NULL,
+    pid         int8 NOT NULL,
     name        varchar(200),
     url         varchar(200),
     authority   varchar(500),
@@ -192,10 +192,10 @@ create table sys_menu
     sort        int,
     version     int,
     deleted     int,
-    creator     bigint,
-    create_time datetime,
-    updater     bigint,
-    update_time datetime,
+    creator     int8,
+    create_time timestamp,
+    updater     int8,
+    update_time timestamp,
     primary key (id)
 );
 
@@ -219,15 +219,15 @@ COMMENT ON COLUMN sys_menu.update_time IS '更新时间';
 
 create table sys_role_menu
 (
-    id          bigint IDENTITY NOT NULL,
-    role_id     bigint,
-    menu_id     bigint,
+    id          bigserial NOT NULL,
+    role_id     int8,
+    menu_id     int8,
     version     int,
     deleted     int,
-    creator     bigint,
-    create_time datetime,
-    updater     bigint,
-    update_time datetime,
+    creator     int8,
+    create_time timestamp,
+    updater     int8,
+    update_time timestamp,
     primary key (id)
 );
 
@@ -245,15 +245,15 @@ COMMENT ON COLUMN sys_role_menu.update_time IS '更新时间';
 
 create table sys_role_data_scope
 (
-    id          bigint IDENTITY NOT NULL,
-    role_id     bigint,
-    org_id      bigint,
+    id          bigserial NOT NULL,
+    role_id     int8,
+    org_id      int8,
     version     int,
     deleted     int,
-    creator     bigint,
-    create_time datetime,
-    updater     bigint,
-    update_time datetime,
+    creator     int8,
+    create_time timestamp,
+    updater     int8,
+    update_time timestamp,
     primary key (id)
 );
 
@@ -272,17 +272,17 @@ COMMENT ON COLUMN sys_role_data_scope.update_time IS '更新时间';
 
 create table sys_dict_type
 (
-    id          bigint IDENTITY NOT NULL,
+    id          bigserial NOT NULL,
     dict_type   varchar(100),
     dict_name   varchar(255),
     remark      varchar(255),
     sort        int,
     version     int,
     deleted     int,
-    creator     bigint,
-    create_time datetime,
-    updater     bigint,
-    update_time datetime,
+    creator     int8,
+    create_time timestamp,
+    updater     int8,
+    update_time timestamp,
     primary key (id)
 );
 
@@ -301,18 +301,18 @@ COMMENT ON COLUMN sys_dict_type.update_time IS '更新时间';
 
 create table sys_dict_data
 (
-    id           bigint IDENTITY NOT NULL,
-    dict_type_id bigint,
+    id           bigserial NOT NULL,
+    dict_type_id int8,
     dict_label   varchar(255),
     dict_value   varchar(255),
     remark       varchar(255),
     sort         int,
     version      int,
     deleted      int,
-    creator      bigint,
-    create_time  datetime,
-    updater      bigint,
-    update_time  datetime,
+    creator      int8,
+    create_time  timestamp,
+    updater      int8,
+    update_time  timestamp,
     primary key (id)
 );
 
@@ -330,19 +330,20 @@ COMMENT ON COLUMN sys_dict_data.create_time IS '创建时间';
 COMMENT ON COLUMN sys_dict_data.updater IS '更新者';
 COMMENT ON COLUMN sys_dict_data.update_time IS '更新时间';
 
+
 create table sys_attachment
 (
-    id           bigint IDENTITY NOT NULL,
+    id           bigserial NOT NULL,
     name         varchar(255) NOT NULL,
     url          varchar(255) NOT NULL,
-    size         bigint,
+    size         int8,
     platform     varchar(50),
     version      int,
     deleted      int,
-    creator      bigint,
-    create_time  datetime,
-    updater      bigint,
-    update_time  datetime,
+    creator      int8,
+    create_time  timestamp,
+    updater      int8,
+    update_time  timestamp,
     primary key (id)
 );
 
@@ -359,16 +360,17 @@ COMMENT ON COLUMN sys_attachment.create_time IS '创建时间';
 COMMENT ON COLUMN sys_attachment.updater IS '更新者';
 COMMENT ON COLUMN sys_attachment.update_time IS '更新时间';
 
+
 create table sys_log_login
 (
-    id           bigint IDENTITY NOT NULL,
+    id           bigserial NOT NULL,
     username     varchar(50),
     ip           varchar(32),
     address      varchar(32),
     user_agent   varchar(500),
     status       int,
     operation    int,
-    create_time  datetime,
+    create_time  timestamp,
     primary key (id)
 );
 
@@ -384,10 +386,8 @@ COMMENT ON COLUMN sys_log_login.create_time IS '创建时间';
 
 
 
-SET IDENTITY_INSERT sys_user ON;
 INSERT INTO sys_user (id, username, password, real_name, avatar, gender, email, mobile, status, org_id, super_admin, version, deleted, creator, create_time, updater, update_time) VALUES (10000, 'admin', '{bcrypt}$2a$10$mW/yJPHjyueQ1g26WNBz0uxVPa0GQdJO1fFZmqdkqgMTGnyszlXxu', 'admin', 'https://cdn.maku.net/images/avatar.png', 0, 'babamu@126.com', '13612345678', 1, null, 1, 0, 0, 10000, now(), 10000, now());
 
-SET IDENTITY_INSERT sys_menu ON;
 INSERT INTO sys_menu (id, pid, name, url, authority, type, open_style, icon, sort, version, deleted, creator, create_time, updater, update_time) VALUES (1, 0, '系统设置', NULL, NULL, 0, 0, 'icon-setting', 1, 0, 0, 10000, now(), 10000, now());
 INSERT INTO sys_menu (id, pid, name, url, authority, type, open_style, icon, sort, version, deleted, creator, create_time, updater, update_time) VALUES (2, 1, '菜单管理', 'sys/menu/index', NULL, 0, 0, 'icon-menu', 0, 0, 0, 10000, now(), 10000, now());
 INSERT INTO sys_menu (id, pid, name, url, authority, type, open_style, icon, sort, version, deleted, creator, create_time, updater, update_time) VALUES (3, 2, '查看', '', 'sys:menu:list', 1, 0, '', 0, 0, 0, 10000, now(), 10000, now());
@@ -428,7 +428,6 @@ INSERT INTO sys_menu (id, pid, name, url, authority, type, open_style, icon, sor
 INSERT INTO sys_menu (id, pid, name, url, authority, type, open_style, icon, sort, version, deleted, creator, create_time, updater, update_time) VALUES (38, 0, '日志管理', '', '', 0, 0, 'icon-filedone', 3, 0, 0, 10000, now(), 10000, now());
 INSERT INTO sys_menu (id, pid, name, url, authority, type, open_style, icon, sort, version, deleted, creator, create_time, updater, update_time) VALUES (39, 38, '登录日志', 'sys/log/login', 'sys:log:login', 0, 0, 'icon-solution', 0, 0, 0, 10000, now(), 10000, now());
 
-SET IDENTITY_INSERT sys_dict_type ON;
 INSERT INTO sys_dict_type (id, dict_type, dict_name, remark, sort, version, deleted, creator, create_time, updater, update_time) VALUES (1, 'post_status', '状态', '岗位管理', 0, 0, 0, 10000, now(), 10000, now());
 INSERT INTO sys_dict_type (id, dict_type, dict_name, remark, sort, version, deleted, creator, create_time, updater, update_time) VALUES (2, 'user_gender', '性别', '用户管理', 0, 0, 0, 10000, now(), 10000, now());
 INSERT INTO sys_dict_type (id, dict_type, dict_name, remark, sort, version, deleted, creator, create_time, updater, update_time) VALUES (3, 'user_status', '状态', '用户管理', 0, 0, 0, 10000, now(), 10000, now());
@@ -437,7 +436,6 @@ INSERT INTO sys_dict_type (id, dict_type, dict_name, remark, sort, version, dele
 INSERT INTO sys_dict_type (id, dict_type, dict_name, remark, sort, version, deleted, creator, create_time, updater, update_time) VALUES (6, 'success_fail', '状态', '操作状态：成功 | 失败', 0, 0, 0, 10000, now(), 10000, now());
 INSERT INTO sys_dict_type (id, dict_type, dict_name, remark, sort, version, deleted, creator, create_time, updater, update_time) VALUES (7, 'login_operation', '操作信息', '登录管理', 0, 0, 0, 10000, now(), 10000, now());
 
-SET IDENTITY_INSERT sys_dict_data ON;
 INSERT INTO sys_dict_data (id, dict_type_id, dict_label, dict_value, remark, sort, version, deleted, creator, create_time, updater, update_time) VALUES (1, 1, '停用', '0', '', 1, 0, 0, 10000, now(), 10000, now());
 INSERT INTO sys_dict_data (id, dict_type_id, dict_label, dict_value, remark, sort, version, deleted, creator, create_time, updater, update_time) VALUES (2, 1, '正常', '1', '', 0, 0, 0, 10000, now(), 10000, now());
 INSERT INTO sys_dict_data (id, dict_type_id, dict_label, dict_value, remark, sort, version, deleted, creator, create_time, updater, update_time) VALUES (3, 2, '男', '0', '', 0, 0, 0, 10000, now(), 10000, now());
@@ -458,5 +456,11 @@ INSERT INTO sys_dict_data (id, dict_type_id, dict_label, dict_value, remark, sor
 INSERT INTO sys_dict_data (id, dict_type_id, dict_label, dict_value, remark, sort, version, deleted, creator, create_time, updater, update_time) VALUES (18, 7, '退出成功', '1', '', 1, 0, 0, 10000, now(), 10000, now());
 INSERT INTO sys_dict_data (id, dict_type_id, dict_label, dict_value, remark, sort, version, deleted, creator, create_time, updater, update_time) VALUES (19, 7, '验证码错误', '2', '', 2, 0, 0, 10000, now(), 10000, now());
 INSERT INTO sys_dict_data (id, dict_type_id, dict_label, dict_value, remark, sort, version, deleted, creator, create_time, updater, update_time) VALUES (20, 7, '账号密码错误', '3', '', 3, 0, 0, 10000, now(), 10000, now());
+
+
+select setval('sys_user_id_seq', (select max(id) from sys_user));
+select setval('sys_menu_id_seq', (select max(id) from sys_menu));
+select setval('sys_dict_type_id_seq', (select max(id) from sys_dict_type));
+select setval('sys_dict_data_id_seq', (select max(id) from sys_dict_data));
 
 commit;

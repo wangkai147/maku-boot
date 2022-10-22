@@ -1,7 +1,6 @@
 package net.maku.framework.common.utils;
 
 import cn.hutool.http.HttpUtil;
-import cn.hutool.json.JSONUtil;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -16,9 +15,7 @@ import java.util.Map;
  */
 @Slf4j
 public class AddressUtils {
-    /**
-     * 实时查询
-     */
+    // 实时查询
     public static final String ADDRESS_URL = "https://whois.pconline.com.cn/ipJson.jsp";
     public static final String UNKNOWN = "未知";
 
@@ -38,7 +35,7 @@ public class AddressUtils {
                 return UNKNOWN;
             }
 
-            Address address = JSONUtil.toBean(response, Address.class);
+            Address address = JsonUtils.parseObject(response, Address.class);
             return String.format("%s %s", address.getPro(), address.getCity());
         } catch (Exception e) {
             log.error("根据IP获取地址异常 {}", ip);
