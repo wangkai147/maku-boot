@@ -36,7 +36,11 @@ public class AddressUtils {
             }
 
             Address address = JsonUtils.parseObject(response, Address.class);
-            return String.format("%s %s", address.getPro(), address.getCity());
+            if (address != null) {
+                return String.format("%s %s", address.getPro(), address.getCity());
+            } else {
+                log.error("解析省市地址异常{}", ip);
+            }
         } catch (Exception e) {
             log.error("根据IP获取地址异常 {}", ip);
         }
