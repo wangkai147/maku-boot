@@ -7,6 +7,8 @@ import net.maku.framework.common.entity.BaseEntity;
 
 /**
  * 字典类型
+ *
+ * @author wangkai
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -28,4 +30,12 @@ public class SysDictTypeEntity extends BaseEntity {
 	 * 排序
 	 */
 	private Integer sort;
+	/**
+	 * 来源  0：字典数据  1：动态SQL
+	 */
+	private Integer dictSource;
+	/**
+	 * 动态sql
+	 */
+	private String dictSql;
 }

@@ -12,6 +12,8 @@ import java.util.Date;
 
 /**
  * 字典类型
+ *
+ * @author wangkai
  */
 @Data
 @Schema(description = "字典类型")
@@ -43,4 +45,10 @@ public class SysDictTypeVO implements Serializable {
 	@Schema(description = "更新时间")
 	@JsonFormat(pattern = DateUtils.DATE_TIME_PATTERN)
 	private Date updateTime;
+
+	@Schema(description = "来源  0：字典数据  1：动态SQL")
+	private Integer dictSource;
+
+	@Schema(description = "动态sql")
+	private String dictSql;
 }
