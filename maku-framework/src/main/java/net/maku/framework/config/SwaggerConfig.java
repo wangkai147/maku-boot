@@ -20,27 +20,25 @@ public class SwaggerConfig {
     public GroupedOpenApi userApi() {
         String[] paths = {"/**"};
         String[] packagedToMatch = {"net.maku"};
-        return GroupedOpenApi.builder().group("MakuBoot").pathsToMatch(paths).packagesToScan(packagedToMatch).build();
+        return GroupedOpenApi.builder().group("MakuBoot")
+                .pathsToMatch(paths)
+                .packagesToScan(packagedToMatch).build();
     }
 
     @Bean
-    public OpenAPI customOpenApi() {
+    public OpenAPI customOpenAPI() {
         Contact contact = new Contact();
         contact.setName("JWangZzz");
         contact.setEmail("2925285800@qq.com");
 
-        License listener = new License();
-        listener.name("MIT").url("https://github.com/wangkai147/maku-boot");
-
-        Info info = new Info();
-        info.title("MakuBoot")
+        return new OpenAPI().info(new Info()
+                .title("MakuBoot")
                 .description("MakuBoot")
                 .contact(contact)
-                .version("1.0")
+                .version("2.0")
                 .termsOfService("https://github.com/wangkai147/maku-boot")
-                .license(listener);
-
-        return new OpenAPI().info(info);
+                .license(new License().name("MIT")
+                        .url("https://github.com/wangkai147/maku-boot")));
     }
 
 }

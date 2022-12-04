@@ -1,22 +1,15 @@
 package net.maku.quartz.utils;
 
-import lombok.extern.slf4j.Slf4j;
 import net.maku.framework.common.exception.ServerException;
 import net.maku.quartz.entity.ScheduleJobEntity;
 import net.maku.quartz.enums.ScheduleConcurrentEnum;
 import net.maku.quartz.enums.ScheduleStatusEnum;
-import net.maku.quartz.job.ScheduleConcurrentExecution;
-import net.maku.quartz.job.ScheduleDisallowConcurrentExecution;
 import org.quartz.*;
 
 /**
  * 定时任务工具类
  */
-@Slf4j
 public class ScheduleUtils {
-    /**
-     * 任务名称前缀
-     */
     private final static String JOB_NAME = "TASK_NAME_";
     /**
      * 任务调度参数key
@@ -24,9 +17,7 @@ public class ScheduleUtils {
     public static final String JOB_PARAM_KEY = "JOB_PARAM_KEY";
 
     /**
-     * 获取quartz任务类，用于创建定时任务：
-     * <p> 禁止并发
-     * <p> 并发执行
+     * 获取quartz任务类
      */
     public static Class<? extends Job> getJobClass(ScheduleJobEntity scheduleJob) {
         if (scheduleJob.getConcurrent().equals(ScheduleConcurrentEnum.NO.getValue())) {
@@ -50,6 +41,50 @@ public class ScheduleUtils {
         return JobKey.jobKey(JOB_NAME + scheduleJob.getId(), scheduleJob.getJobGroup());
     }
 
+    /**
+     * 创建定时任务
+     */
+    public static void createScheduleJob(Scheduler scheduler, ScheduleJobEntity scheduleJob) {
+        try {
+            // job key
+            JobKey jobKey = getJobKey(scheduleJob);
+            // 构建job信息
+            JobDetail jobDetail = JobBuilder.newJob(getJobClass(scheduleJob)).withIdentity(jobKey).build();
+
+            // 表达式调度构建器
+            CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(scheduleJob.getCronExpression())
+                    .withMisfireHandlingInstructionDoNothing();
+
+            // 按新的cronExpression表达式构建一个新的trigger
+            CronTrigger trigger = TriggerBuilder.newTrigger().withIdentity(getTriggerKey(scheduleJob))
+                    .withSchedule(scheduleBuilder).build();
+
+            // 放入参数，运行时的方法可以获取
+            jobDetail.getJobDataMap().put(JOB_PARAM_KEY, scheduleJob);
+            // 把任务添加到Quartz中
+            scheduler.scheduleJob(jobDetail, trigger);
+
+            // 判断是否存在
+            if (scheduler.checkExists(jobKey)) {
+                // 防止创建时存在数据问题，先移除，然后再执行创建操作
+                scheduler.deleteJob(jobKey);
+            }
+
+            // 判断任务是否过期
+            if (CronUtils.getNextExecution(scheduleJob.getCronExpression()) != null) {
+                // 执行调度任务
+                scheduler.scheduleJob(jobDetail, trigger);
+            }
+
+            // 暂停任务
+            if (scheduleJob.getStatus().equals(ScheduleStatusEnum.PAUSE.getValue())) {
+                scheduler.pauseJob(jobKey);
+            }
+        } catch (SchedulerException e) {
+            throw new ServerException("创建定时任务失败", e);
+        }
+    }
+
 
     /**
      * 立即执行任务
@@ -59,7 +94,7 @@ public class ScheduleUtils {
             // 参数
             JobDataMap dataMap = new JobDataMap();
             dataMap.put(JOB_PARAM_KEY, scheduleJob);
-            //通过JobKey执行Job
+
             JobKey jobKey = getJobKey(scheduleJob);
             if (scheduler.checkExists(jobKey)) {
                 scheduler.triggerJob(jobKey, dataMap);
@@ -88,48 +123,6 @@ public class ScheduleUtils {
             scheduler.resumeJob(getJobKey(scheduleJob));
         } catch (SchedulerException e) {
             throw new ServerException("恢复定时任务失败", e);
-        }
-    }
-
-    /**
-     * 创建定时任务
-     */
-    public static void createScheduleJob(Scheduler scheduler, ScheduleJobEntity scheduleJob) {
-        try {
-            // job key
-            JobKey jobKey = getJobKey(scheduleJob);
-            // 构建job信息
-            JobDetail jobDetail = JobBuilder.newJob(getJobClass(scheduleJob)).withIdentity(jobKey).build();
-
-            // 表达式调度构建器
-            CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(scheduleJob.getCronExpression()).withMisfireHandlingInstructionDoNothing();
-
-            // 按新的cronExpression表达式构建一个新的trigger
-            CronTrigger trigger = TriggerBuilder.newTrigger().withIdentity(getTriggerKey(scheduleJob)).withSchedule(scheduleBuilder).build();
-
-            // 放入参数，运行时的方法可以获取
-            jobDetail.getJobDataMap().put(JOB_PARAM_KEY, scheduleJob);
-
-            scheduler.scheduleJob(jobDetail, trigger);
-
-            // 判断是否存在
-            if (scheduler.checkExists(jobKey)) {
-                // 防止创建时存在数据问题，先移除，然后再执行创建操作
-                scheduler.deleteJob(jobKey);
-            }
-
-            // 判断任务是否过期
-            if (CronUtils.getNextExecution(scheduleJob.getCronExpression()) != null) {
-                // 执行调度任务
-                scheduler.scheduleJob(jobDetail, trigger);
-            }
-
-            // 暂停任务
-            if (scheduleJob.getStatus().equals(ScheduleStatusEnum.PAUSE.getValue())) {
-                scheduler.pauseJob(jobKey);
-            }
-        } catch (SchedulerException e) {
-            throw new ServerException("创建定时任务失败", e);
         }
     }
 

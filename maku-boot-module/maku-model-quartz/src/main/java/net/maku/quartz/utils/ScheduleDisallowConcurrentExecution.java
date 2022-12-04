@@ -1,5 +1,6 @@
-package net.maku.quartz.job;
+package net.maku.quartz.utils;
 
+import net.maku.quartz.job.AbstractScheduleJob;
 import org.quartz.DisallowConcurrentExecution;
 
 /**
