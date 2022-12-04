@@ -6,11 +6,15 @@ import net.maku.system.entity.SysUserEntity;
 import net.maku.system.query.SysRoleUserQuery;
 import net.maku.system.query.SysUserQuery;
 import net.maku.system.vo.SysUserVO;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 用户管理
+ *
+ * @author wangkai
  */
 public interface SysUserService extends BaseService<SysUserEntity> {
 
@@ -37,4 +41,18 @@ public interface SysUserService extends BaseService<SysUserEntity> {
      */
     PageResult<SysUserVO> roleUserPage(SysRoleUserQuery query);
 
+    /**
+     * 批量导入用户
+     *
+     * @param file     excel文件
+     * @param password 密码
+     */
+    void importByExcel(MultipartFile file, String password);
+
+    /**
+     * 导出用户信息表格
+     *
+     * @return map
+     */
+    Map<String, String> export();
 }

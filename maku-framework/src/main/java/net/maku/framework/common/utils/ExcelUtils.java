@@ -1,11 +1,14 @@
 package net.maku.framework.common.utils;
 
+import cn.hutool.core.util.URLUtil;
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.support.ExcelTypeEnum;
 import net.maku.framework.common.excel.ExcelDataListener;
 import net.maku.framework.common.excel.ExcelFinishCallBack;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -13,10 +16,12 @@ import java.util.List;
 
 /**
  * The type Excel utils.
+ * {@link <a href="https://easyexcel.opensource.alibaba.com/"></a>}
  *
  * @author wangkai
  */
 public class ExcelUtils {
+
 
     /**
      * 读取excel文件
@@ -105,6 +110,29 @@ public class ExcelUtils {
         try {
             EasyExcel.write(file, head).sheet(sheetName).doWrite(data);
         } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * 导出数据到web
+     * 文件下载（失败了会返回一个有部分数据的Excel）
+     *
+     * @param head      类名
+     * @param excelName excel名字
+     * @param sheetName sheet名称
+     * @param data      数据
+     */
+    public static <T> void excelExport(Class<T> head, String excelName, String sheetName, List<T> data) {
+        try {
+            HttpServletResponse response = HttpContextUtils.getHttpServletResponse();
+            response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+            response.setCharacterEncoding("utf-8");
+            // 这里URLEncoder.encode可以防止中文乱码 当然和easy excel没有关系
+            String fileName = URLUtil.encode(excelName).replaceAll("\\+", "%20");
+            response.setHeader("Content-disposition", "attachment;filename*=utf-8''" + fileName + ".xlsx");
+            EasyExcel.write(response.getOutputStream(), head).sheet(StringUtils.isBlank(sheetName) ? "sheet1" : sheetName).doWrite(data);
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
