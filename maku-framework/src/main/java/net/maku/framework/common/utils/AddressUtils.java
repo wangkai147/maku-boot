@@ -19,7 +19,7 @@ public class AddressUtils {
     public static final String ADDRESS_URL = "https://whois.pconline.com.cn/ipJson.jsp";
     public static final String UNKNOWN = "未知";
 
-    public static String getAddressByIp(String ip) {
+    public static String getAddressByIP(String ip) {
         // 内网
         if (IpUtils.internalIp(ip)) {
             return "内网IP";

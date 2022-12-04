@@ -4,7 +4,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import net.maku.framework.common.utils.Result;
-import net.maku.storage.service.inter.StorageService;
+import net.maku.storage.service.StorageService;
 import net.maku.system.vo.SysFileUploadVO;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

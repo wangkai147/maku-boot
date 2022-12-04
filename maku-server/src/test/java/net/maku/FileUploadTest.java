@@ -1,7 +1,7 @@
 package net.maku;
 
 import cn.hutool.core.io.IoUtil;
-import net.maku.storage.service.inter.StorageService;
+import net.maku.storage.service.StorageService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package net.maku.storage.service.inter;
+package net.maku.storage.service;
 
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.file.FileNameUtil;

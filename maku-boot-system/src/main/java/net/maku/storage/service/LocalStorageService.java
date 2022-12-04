@@ -2,7 +2,6 @@ package net.maku.storage.service;
 
 import net.maku.framework.common.exception.ServerException;
 import net.maku.storage.properties.StorageProperties;
-import net.maku.storage.service.inter.StorageService;
 import org.springframework.util.FileCopyUtils;
 
 import java.io.ByteArrayInputStream;

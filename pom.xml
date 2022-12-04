@@ -45,6 +45,7 @@
         <minio.version>8.4.3</minio.version>
         <qcloud.cos.version>5.6.89</qcloud.cos.version>
         <huaweicloud.obs.version>3.22.3</huaweicloud.obs.version>
+        <easyexcel.version>3.1.1</easyexcel.version>
     </properties>
 
     <dependencies>
@@ -148,6 +149,11 @@
                 <groupId>com.huaweicloud</groupId>
                 <artifactId>esdk-obs-java-bundle</artifactId>
                 <version>${huaweicloud.obs.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

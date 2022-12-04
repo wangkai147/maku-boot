@@ -3,7 +3,7 @@ package net.maku.storage.config;
 import net.maku.storage.enums.StorageTypeEnum;
 import net.maku.storage.properties.StorageProperties;
 import net.maku.storage.service.*;
-import net.maku.storage.service.inter.StorageService;
+import net.maku.storage.service.StorageService;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
