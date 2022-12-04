@@ -46,6 +46,16 @@ public class BaseServiceImpl<M extends BaseMapper<T>, T> extends ServiceImpl<M, 
     }
 
     /**
+     * MyBatis-Plus 数据权限
+     */
+    protected void dataScopeWrapper(LambdaQueryWrapper<T> queryWrapper) {
+        DataScope dataScope = getDataScope(null, null);
+        if (dataScope != null) {
+            queryWrapper.apply(dataScope.getSqlFilter());
+        }
+    }
+
+    /**
      * 原生SQL 数据权限
      *
      * @param tableAlias 表别名，多表关联时，需要填写表别名
@@ -97,15 +107,4 @@ public class BaseServiceImpl<M extends BaseMapper<T>, T> extends ServiceImpl<M, 
 
         return new DataScope(sqlFilter.toString());
     }
-
-    /**
-     * MyBatis-Plus 数据权限
-     */
-    protected void dataScopeWrapper(LambdaQueryWrapper<T> queryWrapper) {
-        DataScope dataScope = getDataScope(null, null);
-        if (dataScope != null) {
-            queryWrapper.apply(dataScope.getSqlFilter());
-        }
-    }
-
 }

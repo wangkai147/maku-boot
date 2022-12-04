@@ -17,19 +17,19 @@
         </dependency>
         <dependency>
             <groupId>net.maku</groupId>
-            <artifactId>maku-model-message</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>net.maku</groupId>
             <artifactId>maku-boot-new</artifactId>
             <version>${revision}</version>
         </dependency>
-        <dependency>
-            <groupId>net.maku</groupId>
-            <artifactId>maku-model-quartz</artifactId>
-            <version>${revision}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>net.maku</groupId>-->
+<!--            <artifactId>maku-model-message</artifactId>-->
+<!--            <version>${revision}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>net.maku</groupId>-->
+<!--            <artifactId>maku-model-quartz</artifactId>-->
+<!--            <version>${revision}</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-springdoc-ui</artifactId>
