@@ -103,7 +103,7 @@ public class SysAuthServiceImpl implements SysAuthService {
         }
 
         // 发送短信
-        return smsApi.send(mobile, "code", code);
+        return smsApi.sendCode(mobile, "code", code);
     }
 
     @Override
